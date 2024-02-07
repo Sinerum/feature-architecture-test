@@ -5,14 +5,15 @@
 #ifndef TESTFEATUREINDUCEDARCHITECTURE_MODULARITY_H
 #define TESTFEATUREINDUCEDARCHITECTURE_MODULARITY_H
 
-#include "logger.h"
-class modularity {
+#include "Logger.h"
+#include "DebugLogger.h"
+#include <memory>
+
+class Modularity {
 public:
-    void doOtherStaff() {
-        if(logger::loglevel == 1) {
-            std::cout<<"TestModularity";
-        }
-    }
+    Modularity();
+    void doOtherStaff();
+    std::unique_ptr<Logger> logger;
 };
 
 

@@ -6,9 +6,9 @@
 #define TESTFEATUREINDUCEDARCHITECTURE_BAR_H
 
 
-#include "foo.h"
+#include "Foo.h"
 
-class bar: foo {
+class Bar: Foo {
 
 };
 

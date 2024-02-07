@@ -1,3 +1,0 @@
-/home/simon/Documents/Vara/projects/TestFeatureInducedArchitecture/cmake-build-debug/CMakeFiles/TestFeatureInducedArchitecture.dir
-/home/simon/Documents/Vara/projects/TestFeatureInducedArchitecture/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/simon/Documents/Vara/projects/TestFeatureInducedArchitecture/cmake-build-debug/CMakeFiles/rebuild_cache.dir

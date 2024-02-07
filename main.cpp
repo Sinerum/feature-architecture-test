@@ -1,14 +1,14 @@
-#include "logger.h"
-#include "foo.h"
-#include "modularity.h"
+#include "Logger.h"
+#include "Foo.h"
+#include "Modularity.h"
 
 int main(int argc, char** argv) {
     if (argc == 2) {
-        logger::loglevel = 1;
+        Logger::loglevel = 1;
     }
-    foo Test = {};
+    Foo Test = {};
     Test.dostuff();
-    modularity M = {};
+    Modularity M = {};
     M.doOtherStaff();
 
 }

@@ -5,13 +5,13 @@
 #ifndef TESTFEATUREINDUCEDARCHITECTURE_FOO_H
 #define TESTFEATUREINDUCEDARCHITECTURE_FOO_H
 
-#include "logger.h"
-class foo {
+#include "Logger.h"
+class Foo {
 
 public:
     void dostuff() {
-        if (logger::loglevel == 1) {
-            logger::log("Foo Test");
+        if (Logger::loglevel == 1) {
+            Logger::log("Foo Test");
         }
     }
 };

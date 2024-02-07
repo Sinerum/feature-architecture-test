@@ -6,10 +6,11 @@
 #define TESTFEATUREINDUCEDARCHITECTURE_LOGGER_H
 #include "iostream"
 
-class logger {
+class Logger {
 public:
     static int loglevel;
-    static void log(const std::string& log) { std::cout << log;}
+
+    virtual void log(const std::string& log) { std::cout << log;}
 };
 
 
