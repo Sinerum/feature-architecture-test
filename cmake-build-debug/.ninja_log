@@ -1,0 +1,10 @@
+# ninja log v5
+388	450	1707222771331511356	TestFeatureInducedArchitecture	45957c1ea5b71cb0
+0	369	1707222771247511358	CMakeFiles/TestFeatureInducedArchitecture.dir/foo.cpp.o	2f49e10ce3599293
+0	388	1707222771267511358	CMakeFiles/TestFeatureInducedArchitecture.dir/bar.cpp.o	9181d60cc9c08c93
+0	385	1707222771263511358	CMakeFiles/TestFeatureInducedArchitecture.dir/main.cpp.o	37432349b4bfe4ef
+1	370	1707222771247511358	CMakeFiles/TestFeatureInducedArchitecture.dir/logger.cpp.o	c0056e3195b5b749
+0	320	1707222921907506568	CMakeFiles/TestFeatureInducedArchitecture.dir/main.cpp.o	37432349b4bfe4ef
+321	384	1707222921971506566	TestFeatureInducedArchitecture	45957c1ea5b71cb0
+1	365	1707222933679506193	CMakeFiles/TestFeatureInducedArchitecture.dir/main.cpp.o	37432349b4bfe4ef
+365	431	1707222933747506191	TestFeatureInducedArchitecture	45957c1ea5b71cb0
