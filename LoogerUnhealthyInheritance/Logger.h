@@ -5,13 +5,10 @@
 #ifndef TESTFEATUREINDUCEDARCHITECTURE_LOGGER_H
 #define TESTFEATUREINDUCEDARCHITECTURE_LOGGER_H
 #include "iostream"
-
 class Logger {
 public:
-    static int loglevel;
-
     virtual void log(const std::string& log) { std::cout << log;}
 };
 
-
+int loglevel = 0;
 #endif //TESTFEATUREINDUCEDARCHITECTURE_LOGGER_H

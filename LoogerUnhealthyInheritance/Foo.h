@@ -10,7 +10,7 @@ class Foo {
 
 public:
     void dostuff() {
-        if (Logger::loglevel == 1) {
+        if (loglevel == 1) {
             Logger::log("Foo Test");
         }
     }

@@ -1,0 +1,12 @@
+//
+// Created by simon on 07.02.24.
+//
+
+#ifndef TESTFEATUREINDUCEDARCHITECTURE_CONFIG_H
+#define TESTFEATUREINDUCEDARCHITECTURE_CONFIG_H
+namespace config{
+    bool Color = false;
+}
+
+
+#endif //TESTFEATUREINDUCEDARCHITECTURE_CONFIG_H
