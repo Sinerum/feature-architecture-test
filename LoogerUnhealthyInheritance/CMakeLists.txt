@@ -3,5 +3,4 @@ project(TestFeatureInducedArchitecture)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(TestFeatureInducedArchitecture main.cpp Foo.h Foo.cpp Bar.h Bar.cpp Logger.h Logger.cpp Modularity.h
-        Modularity.cpp)
+add_executable(UnhealthyInheritance main.cpp Logger.h Logger.cpp Modularity.h Modularity.cpp DebugLogger.h DebugLogger.cpp)
