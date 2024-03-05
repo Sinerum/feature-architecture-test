@@ -10,8 +10,9 @@
 #include <memory>
 
 class Modularity {
+    const int loglevel;
 public:
-    Modularity();
+    Modularity(const int loglevel);
     void doOtherStaff();
     std::unique_ptr<Logger> logger;
 };
