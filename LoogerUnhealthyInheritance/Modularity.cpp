@@ -3,7 +3,7 @@
 //
 
 #include "Modularity.h"
-#include "Logger.h"
+#include "DebugLogger.h"
 
 Modularity::Modularity(const int loglevel): loglevel(loglevel) {
     if (loglevel == 1) {

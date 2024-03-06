@@ -6,7 +6,6 @@
 #define TESTFEATUREINDUCEDARCHITECTURE_MODULARITY_H
 
 #include "Logger.h"
-#include "DebugLogger.h"
 #include <memory>
 
 class Modularity {

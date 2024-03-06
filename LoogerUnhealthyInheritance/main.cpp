@@ -1,4 +1,3 @@
-#include "Logger.h"
 #include "Modularity.h"
 
 int main(int argc, char** argv) {
