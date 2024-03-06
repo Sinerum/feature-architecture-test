@@ -4,12 +4,16 @@
 
 #ifndef TESTFEATUREINDUCEDARCHITECTURE_NODE_H
 #define TESTFEATUREINDUCEDARCHITECTURE_NODE_H
-#include "Config.h"
 #include "Color.h"
 #include <compare>
+template <bool colored>
 class Node {
 public:
-    explicit Node(const int Value, const Color& color = Color::black()) : value(Value), color(color) {}
+    template<std::enable_if<colored> = false>
+    explicit Node(const int Value) : value(Value) {}
+
+    template<std::enable_if<colored> = true>
+    explicit Node(const int Value, const Color &color) : value(Value), color(color) {}
 
     Node(const Node &node) {
         value = node.value;
@@ -17,18 +21,18 @@ public:
     }
 
     [[nodiscard]] int getValue() const { return value; }
-    [[nodiscard]] Color getColor() const { if(config::Color) {
+
+    template<std::enable_if<colored> = true>
+    [[nodiscard]] Color getColor() const {
         return color;
-    } else {
-        return Color::black();
-    } }
+    }
 
     std::strong_ordering operator<=>(const Node &rhs) const {
         return value <=> rhs.value;
     }
 
     bool operator==(const Node &rhs) const {
-        return value == rhs.value && (!config::Color || color == rhs.color);
+        return value == rhs.value && (!colored || color == rhs.color);
     }
 
 
