@@ -9,11 +9,10 @@
 template <bool colored>
 class Node {
 public:
-    template<std::enable_if<colored> = false>
-    explicit Node(const int Value) : value(Value) {}
+    explicit Node(int Value) : value(Value) {}
 
-    template<std::enable_if<colored> = true>
-    explicit Node(const int Value, const Color &color) : value(Value), color(color) {}
+    template<std::enable_if_t<colored,bool> = true>
+    explicit Node(int Value, Color &color) : value(Value), color(color) {}
 
     Node(const Node &node) {
         value = node.value;
@@ -22,7 +21,7 @@ public:
 
     [[nodiscard]] int getValue() const { return value; }
 
-    template<std::enable_if<colored> = true>
+    template<std::enable_if_t<colored,bool> = true>
     [[nodiscard]] Color getColor() const {
         return color;
     }
@@ -38,8 +37,9 @@ public:
 
 private:
     Color color = Color::black();
-    int value;
+    int value = 0;
 };
 
+typedef Node<true> ColoredNode;
 
 #endif //TESTFEATUREINDUCEDARCHITECTURE_NODE_H
