@@ -11,15 +11,18 @@ class Node {
 public:
     explicit Node(int Value);
 
-    template<std::enable_if_t<colored,bool> = true>
-    explicit Node(int Value, Color &color);
+    template<class = std::enable_if<colored>>
+    explicit Node(int Value, Color &color): value(Value), color(color) {
+    }
 
     Node(const Node &node);
 
     [[nodiscard]] int getValue() const;
 
-    template<std::enable_if_t<colored,bool> = true>
-    [[nodiscard]] Color getColor() const;
+    template<class = std::enable_if<colored>>
+    [[nodiscard]] Color getColor() const{
+        return color;
+    }
 
     std::strong_ordering operator<=>(const Node &rhs) const;
 

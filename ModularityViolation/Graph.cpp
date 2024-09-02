@@ -5,7 +5,7 @@
 #include "Graph.h"
 
 template<bool colored>
-void Graph<colored>::addNode(const Graph::NodeTy &Node){
+void Graph<colored>::addNode(const Node<colored> &Node){
     Nodes.push_back(Node);
 }
 
@@ -45,3 +45,6 @@ Color Graph<colored>::getEdgeColor(const Graph::NodeTy &from, const Graph::NodeT
         return Color::black();
     }
 }
+
+template class Graph<true>;
+template class Graph<false>;

@@ -36,6 +36,4 @@ public:
 };
 
 
-
-
 #endif //TESTFEATUREINDUCEDARCHITECTURE_GRAPH_H
