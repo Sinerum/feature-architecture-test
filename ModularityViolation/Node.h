@@ -9,36 +9,28 @@
 template <bool colored>
 class Node {
 public:
-    explicit Node(int Value) : value(Value) {}
+    explicit Node(int Value);
 
     template<std::enable_if_t<colored,bool> = true>
-    explicit Node(int Value, Color &color) : value(Value), color(color) {}
+    explicit Node(int Value, Color &color);
 
-    Node(const Node &node) {
-        value = node.value;
-        color = node.color;
-    }
+    Node(const Node &node);
 
-    [[nodiscard]] int getValue() const { return value; }
+    [[nodiscard]] int getValue() const;
 
     template<std::enable_if_t<colored,bool> = true>
-    [[nodiscard]] Color getColor() const {
-        return color;
-    }
+    [[nodiscard]] Color getColor() const;
 
-    std::strong_ordering operator<=>(const Node &rhs) const {
-        return value <=> rhs.value;
-    }
+    std::strong_ordering operator<=>(const Node &rhs) const;
 
-    bool operator==(const Node &rhs) const {
-        return value == rhs.value && (!colored || color == rhs.color);
-    }
+    bool operator==(const Node &rhs) const;
 
 
 private:
     Color color = Color::black();
     int value = 0;
 };
+
 
 typedef Node<true> ColoredNode;
 

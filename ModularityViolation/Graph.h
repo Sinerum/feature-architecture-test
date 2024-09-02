@@ -18,44 +18,24 @@ class Graph {
     std::map<NodeTy, std::vector<NodeTy>> edges = {};
 public:
 
-    void addNode(const NodeTy &Node) {
-        Nodes.push_back(Node);
-    }
+    void addNode(const NodeTy &Node);
 
-    [[nodiscard]] const std::vector<NodeTy> &getNodeTys() const {
-        return Nodes;
-    }
+    [[nodiscard]] const std::vector<NodeTy> &getNodes() const;
 
-    void addEdge(const NodeTy &from, const NodeTy &to) {
-        edges[from].push_back(to);
-    }
+    void addEdge(const NodeTy &from, const NodeTy &to);
 
-    [[nodiscard]] const std::map<NodeTy, std::vector<NodeTy>> &getEdges() const {
-        return edges;
-    }
+    [[nodiscard]] const std::map<NodeTy, std::vector<NodeTy>> &getEdges() const;
 
-    [[nodiscard]] std::vector<NodeTy> getNeighbours(const NodeTy &NodeTy) const {
-        return edges.at(NodeTy);
-    }
+    [[nodiscard]] std::vector<NodeTy> getNeighbours(const NodeTy &NodeTy) const;
 
-    [[nodiscard]] bool hasEdge(const NodeTy &from, const NodeTy &to) const {
-        return std::find(edges.at(from).begin(), edges.at(from).end(), to) != edges.at(from).end();
-    }
+    [[nodiscard]] bool hasEdge(const NodeTy &from, const NodeTy &to) const;
 
-    [[nodiscard]] Color getEdgeColor(const NodeTy &from, const NodeTy &to) const {
-        if(!hasEdge(from, to)) throw std::invalid_argument("No edge from " + std::to_string(from.getValue()) + " to " + std::to_string(to.getValue()));
-        if(colored) {
-            Color fromColor = Nodes.at(from.getValue()).getColor();
-            Color toColor = Nodes.at(to.getValue()).getColor();
-            return {(fromColor.getR() + toColor.getR()) / 2, (fromColor.getG() + toColor.getG()) / 2,
-                         (fromColor.getB() + toColor.getB()) / 2};
-        } else {
-            return Color::black();
-        }
-    }
+    [[nodiscard]] Color getEdgeColor(const NodeTy &from, const NodeTy &to) const;
 
 
 };
+
+
 
 
 #endif //TESTFEATUREINDUCEDARCHITECTURE_GRAPH_H
