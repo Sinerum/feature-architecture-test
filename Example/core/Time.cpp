@@ -3,7 +3,7 @@
 //
 
 #include "Time.h"
-
+long Time::tm = 0;
 long Time::currentTimeMillis() {
     tm++;
     return tm;

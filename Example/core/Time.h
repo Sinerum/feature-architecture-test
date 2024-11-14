@@ -7,9 +7,9 @@
 
 
 class Time {
-    long tm;
+    static long tm;
 public:
-    Time() : tm(0) {}
+    Time() = default;
     long currentTimeMillis();
 };
 

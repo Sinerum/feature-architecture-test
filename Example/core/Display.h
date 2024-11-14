@@ -6,10 +6,10 @@
 #define EXAMPLE_DISPLAY_H
 
 #include <string>
-
+extern bool display_time;
 class Display {
 public:
-    static void show(std::string content);
+    void show(std::string content);
 
 };
 
