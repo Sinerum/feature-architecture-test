@@ -20,3 +20,8 @@ void Display::show(std::string content) {
     }
     std::cout << std::endl;
 }
+
+void testDisplay() {
+    Display d;
+    d.show("Hello World");
+}
