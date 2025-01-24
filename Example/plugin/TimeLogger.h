@@ -13,7 +13,7 @@ class TimeLogger: public Plugin {
     Fs fs;
     Time t;
 public:
-    explicit TimeLogger(std::string file) : fs(std::move(file)) {};
+    explicit TimeLogger(std::string& file) : fs(std::move(file)) {};
     void doSomething() override;
 };
 

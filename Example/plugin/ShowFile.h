@@ -12,7 +12,7 @@ class ShowFile: public Plugin{
     Fs fs;
     Display d;
 public:
-    explicit ShowFile(std::string file) : fs(std::move(file)) {};
+    explicit ShowFile(std::string& file) : fs(std::move(file)) {};
     void doSomething();
 
 };
