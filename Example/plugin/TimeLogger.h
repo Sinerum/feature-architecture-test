@@ -5,7 +5,7 @@
 #ifndef EXAMPLE_TIMELOGGER_H
 #define EXAMPLE_TIMELOGGER_H
 #include <utility>
-
+#include <string>
 #include "plugin.h"
 #include "Fs.h"
 #include "Time.h"

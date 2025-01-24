@@ -3,8 +3,10 @@
 #include "plugin/ShowFile.h"
 #include "PluginManager.h"
 #include "config.h"
+#include <string>
 int main() {
-    PluginManager p({new TimeLogger("log.txt"),new ShowFile("log.txt")});
+	std::string log = "log.txt";
+    PluginManager p({new TimeLogger(log),new ShowFile(log)});
     display_time = false;
     p.doSomething();
     p.doSomething();

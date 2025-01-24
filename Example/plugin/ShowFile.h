@@ -7,6 +7,7 @@
 #include "Fs.h"
 #include "Display.h"
 #include "plugin.h"
+#include <string>
 class ShowFile: public Plugin{
     Fs fs;
     Display d;
