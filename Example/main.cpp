@@ -1,4 +1,3 @@
-#include <iostream>
 #include "plugin/TimeLogger.h"
 #include "plugin/ShowFile.h"
 #include "PluginManager.h"
