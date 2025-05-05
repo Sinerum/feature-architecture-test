@@ -9,6 +9,7 @@ include_directories(plugin)
 add_executable(Example main.cpp
         plugin/TimeLogger.cpp
         plugin/ShowFile.cpp
+        plugin/Encryption.cpp
         core/Fs.cpp
         core/Time.cpp
         core/Display.cpp

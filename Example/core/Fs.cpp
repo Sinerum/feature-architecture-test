@@ -10,6 +10,8 @@ void Fs::loadFile(std::string name) {
 }
 
 void Fs::appendContent(std::string content) {
+    if (encryption.has_value())
+        content = encryption->encrypt(content);
      Fs::fileContents[file] += content;
         std::cout << "Fs::appendContent " << content;
 

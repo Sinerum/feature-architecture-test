@@ -9,11 +9,16 @@
 #include "plugin.h"
 #include "Fs.h"
 #include "Time.h"
+extern bool encrypt;
 class TimeLogger: public Plugin {
     Fs fs;
     Time t;
 public:
-    explicit TimeLogger(std::string& file) : fs(std::move(file)) {};
+    explicit TimeLogger(std::string& file) : fs(std::move(file)) {
+        if(encrypt) {
+            Encryption::setKey("TimeLogger");
+        }
+    };
     void doSomething() override;
 };
 

@@ -7,6 +7,7 @@ int main() {
 	std::string log = "log.txt";
     PluginManager p({new TimeLogger(log),new ShowFile(log)});
     display_time = false;
+    encrypt = true;
     p.doSomething();
     p.doSomething();
 }
