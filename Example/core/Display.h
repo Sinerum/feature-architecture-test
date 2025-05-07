@@ -10,7 +10,7 @@ extern bool display_time;
 class Display {
 public:
     void show(std::string content);
-
+    void displayTime();
 };
 
 
