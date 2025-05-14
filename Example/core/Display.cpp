@@ -13,17 +13,13 @@ void Display::show(std::string content) {
     }
     std::cout << std::endl;
     std::cout << "|" << content << "|"  << std::endl;
-    displayTime();
+    if(display_time) {
+        std::cout << "|" << "Time: " << Time().currentTimeMillis() << "|" << std::endl;
+    }
     for(int i = 0; i < content.length() + 2; i++) {
         std::cout << "-";
     }
     std::cout << std::endl;
-}
-
-void Display::displayTime() {
-    if(display_time) {
-        std::cout << "|" << "Time: " << Time().currentTimeMillis() << "|" << std::endl;
-    }
 }
 
 void testDisplay() {

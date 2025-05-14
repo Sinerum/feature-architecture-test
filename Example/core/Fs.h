@@ -30,14 +30,10 @@ public:
     std::string getContent() { return Fs::fileContents[file]; }
     std::string getFile() { return file; }
 
-    std::string encryptContent(std::string content) {
-        if (encryption.has_value())
-            return encryption->encrypt(content);
-        return content;
-    }
-
     void setContent(std::string content) {
-    Fs::fileContents[file] = encryptContent(content); }
+        if (encrypt)
+            content = encryption->encrypt(content);
+    Fs::fileContents[file] = content; }
 
     void appendContent(std::string content);
 };

@@ -3,13 +3,16 @@
 //
 
 #include "Fs.h"
+
+#include <utility>
 std::map<std::string,std::string> Fs::fileContents = {};
 void Fs::loadFile(std::string name) {
-    file = name;
+    file = std::move(name);
 }
 
 void Fs::appendContent(std::string content) {
-     Fs::fileContents[file] += encryptContent(content);
-        std::cout << "Fs::appendContent " << content;
+    if (encrypt)
+        content = encryption->encrypt(content);
+    Fs::fileContents[file] += content;
 
 }
