@@ -13,7 +13,7 @@
 #include <utility>
 
 #include "Encryption.h"
-extern bool encrypt;
+#include "../config.h"
 class Fs {
     std::string file;
     static std::map <std::string, std::string> fileContents;

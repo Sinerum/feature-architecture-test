@@ -9,7 +9,6 @@
 #include "plugin.h"
 #include "Fs.h"
 #include "Time.h"
-extern bool encrypt;
 class TimeLogger: public Plugin {
     Fs fs;
     Time t;

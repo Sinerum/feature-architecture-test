@@ -3,11 +3,12 @@
 #include "PluginManager.h"
 #include "config.h"
 #include <string>
+bool display_time = false;
+bool encrypt = true;
+
 int main() {
 	std::string log = "log.txt";
     PluginManager p({new TimeLogger(log),new ShowFile(log)});
-    display_time = false;
-    encrypt = true;
     p.doSomething();
     p.doSomething();
 }

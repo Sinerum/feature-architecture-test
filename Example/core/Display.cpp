@@ -5,6 +5,7 @@
 #include "Display.h"
 #include "Time.h"
 #include <iostream>
+#include "../config.h"
 void Display::show(std::string content) {
     std::cout << "Display::show " << std::endl;
     for(int i = 0; i < content.length() + 2; i++) {

@@ -3,7 +3,6 @@
 //
 
 #include "Fs.h"
-
 std::map<std::string,std::string> Fs::fileContents = {};
 void Fs::loadFile(std::string name) {
     file = name;
