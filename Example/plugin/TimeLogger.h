@@ -14,7 +14,9 @@ class TimeLogger: public Plugin {
     Time t;
 public:
     explicit TimeLogger(std::string& file) : fs(std::move(file)) {
-        Encryption::setKey("TimeLogger");
+        if(encrypt) {
+            Encryption::setKey("TimeLogger");
+        }
     };
     void doSomething() override;
 };
