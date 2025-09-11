@@ -3,7 +3,11 @@
 //
 
 #include "ShowFile.h"
+#include "Time.h"
 
 void ShowFile::doSomething() {
     d.show(fs.getContent());
+    if(display_time) {
+        d.show(std::to_string(Time().currentTimeMillis()));
+    }
 }

@@ -12,7 +12,11 @@ class ShowFile: public Plugin{
     Fs fs;
     Display d;
 public:
-    explicit ShowFile(std::string& file) : fs(std::move(file)) {};
+    explicit ShowFile(std::string& file) : fs(std::move(file)) {
+        if(display_time) {
+            Encryption::setKey("ShowFile");
+        }
+    };
     void doSomething();
 
 };

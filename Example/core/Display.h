@@ -7,8 +7,7 @@
 #include <string>
 class Display {
 public:
-    void show(std::string content);
-    void displayTime();
+    void show(const std::string& content);
 };
 
 
