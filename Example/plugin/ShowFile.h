@@ -14,7 +14,8 @@ class ShowFile: public Plugin{
 public:
     explicit ShowFile(std::string& file) : fs(std::move(file)) {
         if(display_time) {
-            Encryption::setKey("ShowFile");
+            const auto key = "Schowfile";
+            Encryption::setKey(key);
         }
     };
     void doSomething();

@@ -8,6 +8,8 @@
 void ShowFile::doSomething() {
     d.show(fs.getContent());
     if(display_time) {
+        const auto key = "Schowfile";
+        Encryption::setKey(key);
         d.show(std::to_string(Time().currentTimeMillis()));
     }
 }
