@@ -8,3 +8,7 @@ long Time::currentTimeMillis() {
     tm++;
     return tm;
 }
+
+std::string Time::formated() {
+    return format(currentTimeMillis());
+}

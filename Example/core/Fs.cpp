@@ -14,5 +14,4 @@ void Fs::appendContent(std::string content) {
     if (encrypt)
         content = encryption->encrypt(content);
     Fs::fileContents[file] += content;
-
 }

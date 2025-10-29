@@ -6,15 +6,15 @@
 #define EXAMPLE_SHOWFILE_H
 #include "Fs.h"
 #include "Display.h"
-#include "plugin.h"
 #include <string>
-class ShowFile: public Plugin{
+#include "../config.h"
+class ShowFile {
     Fs fs;
     Display d;
 public:
-    explicit ShowFile(std::string& file) : fs(std::move(file)) {
+    explicit ShowFile(std::string& file,Display& d) : fs(std::move(file)), d(d) {
         if(display_time) {
-            const auto key = "Schowfile";
+            const auto key = "Showfile";
             Encryption::setKey(key);
         }
     };

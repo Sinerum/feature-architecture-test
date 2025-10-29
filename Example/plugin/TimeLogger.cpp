@@ -5,7 +5,7 @@
 #include "TimeLogger.h"
 
 void TimeLogger::doSomething() {
-    if(encrypt) {
+    if(display_time) {
         Encryption::setKey("TimeLogger");
     }
     fs.appendContent(std::to_string(t.currentTimeMillis()));

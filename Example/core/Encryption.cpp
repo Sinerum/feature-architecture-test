@@ -7,13 +7,13 @@
 #include <utility>
 std::string Encryption::key = "default_key";
 std::string Encryption::encrypt(const std::string& data) {
-    return data+Encryption::key;
+    return data+key;
 }
 
 void Encryption::setKey(std::string new_key) {
-    Encryption::key = std::move(new_key);
+    key = std::move(new_key);
 }
 
 const std::string &Encryption::getKey() {
-    return Encryption::key;
+    return key;
 }
