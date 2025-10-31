@@ -16,10 +16,10 @@ public:
 int main() {
     int a = 1;
     Test t{};
-    t.test(a);
     if (feature) {
         a =2;
     }
+    t.test(a);
     return 0;
 }
 
