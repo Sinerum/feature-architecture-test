@@ -15,7 +15,6 @@ ShowFile::ShowFile(std::string &file, Display &d) : fs(std::move(file)), d(d) {
 
 
 void ShowFile::doSomething() {
-    d.show(fs.getContent());
     if(display_time) {
         if (encrypt) {
             const auto key = "Showfile";
@@ -23,4 +22,5 @@ void ShowFile::doSomething() {
         }
         d.show(Time().formated());
     }
+    d.show(fs.getContent());
 }
