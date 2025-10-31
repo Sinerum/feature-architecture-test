@@ -11,4 +11,7 @@ int main(int argc,char* argv[]) {
 	std::string log = "log.txt";
     auto timeLogger = TimeLogger(log);
 	auto FileDisplay = ShowFile(log,d);
+	timeLogger.doSomething();
+	FileDisplay.doSomething();
+	return 0;
 }
