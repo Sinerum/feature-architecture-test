@@ -9,10 +9,10 @@ void test() {
 }
 
 int main() {
-    test();
     if (feature) {
         int  a =2;
     }
+    test();
     return 0;
 }
 
