@@ -12,12 +12,7 @@ class ShowFile {
     Fs fs;
     Display d;
 public:
-    explicit ShowFile(std::string& file,Display& d) : fs(std::move(file)), d(d) {
-        if(display_time) {
-            const auto key = "Showfile";
-            Encryption::setKey(key);
-        }
-    };
+    explicit ShowFile(std::string& file,Display& d);
     void doSomething();
 
 };
