@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 bool feature = true;
 class Test {
@@ -7,7 +8,9 @@ public:
     void test(int a) {
         int t = 42;
         a += t;
+        int c = exception[0];
     }
+    std::vector<int> exception{};
 };
 
 int main() {
