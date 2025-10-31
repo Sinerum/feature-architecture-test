@@ -7,7 +7,7 @@
 #include "Fs.h"
 #include "Display.h"
 #include <string>
-#include "../config.h"
+
 class ShowFile {
     Fs fs;
     Display d;

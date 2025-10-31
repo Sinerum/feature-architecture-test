@@ -14,6 +14,7 @@
 
 #include "Encryption.h"
 #include "../config.h"
+
 class Fs {
     std::string file;
     static std::map <std::string, std::string> fileContents;
