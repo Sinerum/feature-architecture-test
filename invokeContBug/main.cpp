@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-
 bool feature = true;
+
 class Test {
 public:
     Test() = default;
