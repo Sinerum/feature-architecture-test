@@ -20,7 +20,8 @@ void ShowFile::doSomething() {
             const auto key = "Showfile";
             Encryption::setKey(key);
         }
-        d.show(Time().formated());
+        auto time = Time().formated();
+        d.show(time);
     }
     d.show(fs.getContent());
 }
