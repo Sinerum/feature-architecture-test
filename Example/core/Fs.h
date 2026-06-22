@@ -13,6 +13,7 @@
 #include <utility>
 
 #include "Encryption.h"
+#include "Time.h"
 #include "../config.h"
 
 class Fs {
@@ -20,7 +21,7 @@ class Fs {
     static std::map <std::string, std::string> fileContents;
     std::optional<Encryption> encryption;
 public:
-    Fs(std::string name) : file(std::move(name)) {
+    Fs(std::string name): file(std::move(name)) {
         if(encrypt)
             encryption = Encryption();
     }

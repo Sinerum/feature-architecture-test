@@ -5,6 +5,7 @@
 
 bool display_time = false;
 bool encrypt = true;
+bool time_stamp = true;
 
 int main(int argc,char* argv[]) {
 	auto d = Display();
